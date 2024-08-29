@@ -1,0 +1,322 @@
+:root {
+    --border-color: #D1D5DB;
+    --space-to-content: 4.8em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 6.4em auto;
+    background-color: #121212;
+}
+
+
+html, body {
+    font-size: 10px;
+    font-family: "Inter", sans-serif;
+    max-width: 550px;
+    color: #121212;
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4.3rem;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+    color:white
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.no-content-text-on-background{
+    font-size: 1.8em;
+    font-weight: 600;
+    color:#DFDDDD;
+    margin: 1em 0;
+    letter-spacing: 0.025em;
+
+
+}
+
+p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header  {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    background-image: url("images/header.png");
+    height: 208px;
+}
+
+.excerpt {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6B7280;
+}
+
+.texts-in-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 var(--space-to-content) 0 var(--space-to-content);
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    margin: -2.2rem var(--space-to-content) 0 var(--space-to-content);
+    height: 4.4rem;
+}
+
+.input-and-icon{
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+   
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px 0 0 6px;
+    color: #6B7280;
+    font-size: 1.4rem;
+    padding-left: 32px;
+}
+
+input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+    cursor: pointer;
+  }
+
+input:focus {
+    outline: none;
+    border: 2px solid #18A0FB;
+    border-radius: 6px 0 0 6px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.search-btn {
+    background-color: #F9FAFB;;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: none;
+    border-right: 1px solid var(--border-color);
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    width: 120px;
+    height: 100%;
+    color: #374151;
+    font-size: 1.4rem;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, border-color 0s, background-color 0s;
+}
+
+.search-btn:hover {
+    background-color: #A3D9FD;
+    border-color: #A3D9FD;
+}
+
+.search-btn:active {
+    box-shadow: none;
+    transform: translateY(2px) 
+}
+
+.loading .search-btn-text {
+    display: none;
+  }
+
+  .spinner {
+    display: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top-color: #18A0FB;
+    border-radius: 90%;
+    animation: spin 0.6s linear infinite;
+  }
+
+  .loading .spinner {
+    display: inline-block;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+.list-of-films, .my-watchlist {
+    background-color: white;
+    margin: 4.4em var(--space-to-content) 0 var(--space-to-content);
+}
+
+.list-item {
+    display: flex;
+    gap: 2em;
+    padding: 2em 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+ul {
+    list-style-type: none;
+      padding: 0;
+      margin: 0;
+}
+
+.about-film {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.poster {
+    width: 100px;
+}
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.second-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.6em;
+
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.score img {
+    padding-bottom: 2px;
+}
+
+.small-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #111827;
+    transition: transform 0.2s ease, border-color 0s, background-color 0s;
+}
+
+.my-watchlist-page-placeholder .small-btn {
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.add-btn svg {
+    fill: #111827;
+    width: 1.6em;
+    height: 1.6em;
+    padding-bottom: 2px;
+}
+
+.add-btn:hover {
+    color: #74C6FD;
+}
+
+.add-btn:active {
+    color: #18A0FB;
+    transform: translateY(2px);
+}
+
+.add-btn:hover svg {
+    fill: #74C6FD;
+}
+
+.add-btn:active svg {
+    fill: #18A0FB;
+}
+
+.remove-btn{
+    color: #FF989A;
+}
+
+.remove-btn:hover {
+    color: #F86466;
+}
+
+.remove-btn:active {
+    color: #F86466;
+    transform: translateY(2px);
+}
+
+.remove-btn svg {
+    fill: #FF989A;
+    width: 1.6em;
+    height: 1.6em;
+    padding-bottom: 2px;
+}
+
+.remove-btn:hover svg {
+    fill: #F86466;
+}
+
+.remove-btn:active svg {
+    fill: #F86466;
+}
+
+.index-page-placeholder {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index-page-placeholder h2 {
+    margin-top: 1em;
+    color:#C3C3C3;
+}
+
+.my-watchlist-page-placeholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*TODO Lage til knapp som sier added, og når du hovrer over den så sier den remove*/

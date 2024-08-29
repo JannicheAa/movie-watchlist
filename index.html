@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="index-page">
+    <header>
+      <div class="texts-in-header">
+        <h1>Finn en film</h1>
+        <a id="link-to-watchlist" href="watchlist.html">Filmer jeg vil se</a>
+      </div>
+    </header>
+    <div class="search-bar">
+      <div class="input-and-icon">
+        <img class="search-icon" src="images/search-icon.svg" />
+        <input type="search" id="input" placeholder="Søk etter film" />
+      </div>
+      <button class="search-btn" id="search-btn">
+        <span class="spinner"></span>
+        <span class="search-btn-text">Søk</span>
+      </button>
+    </div>
+    <ul class="list-of-films" id="list-of-films"></ul>
+    <div class="index-page-placeholder" id="index-page-placeholder"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
