@@ -19,7 +19,7 @@ let alreadyInMyWatchlist = [];
 let filmlistHtml = "";
 
 if (indexPageEl) {
-  if (filmsFromLocalStorage.length === 0) {
+  if (filmsFromLocalStorage === 0 || !filmsFromLastSearchResult) {
     renderEmptyIndexPageMessage();
   } else if (
     filmsFromLastSearchResult &&
